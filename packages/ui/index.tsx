@@ -4,6 +4,10 @@ import {
   Header,
   Title,
   MantineProvider,
+  Navbar,
+  UnstyledButton,
+  Group,
+  Text,
 } from "@mantine/core";
 import { BrowserRouter, Outlet, Link, Routes, Route } from "react-router-dom";
 
@@ -12,11 +16,44 @@ export type Route = {
   path: string;
 };
 
+export type NavLink = {
+  label: string;
+  path: string;
+};
+
+function MainLink({ label, path }: NavLink) {
+  return (
+    <Link to={path}>
+      <UnstyledButton
+        sx={(theme) => ({
+          display: "block",
+          width: "100%",
+          padding: theme.spacing.xs,
+          borderRadius: theme.radius.sm,
+          color:
+            theme.colorScheme === "dark" ? theme.colors.dark[0] : theme.black,
+          "&:hover": {
+            backgroundColor:
+              theme.colorScheme === "dark"
+                ? theme.colors.dark[6]
+                : theme.colors.gray[0],
+          },
+        })}
+      >
+        <Group>
+          <Text size="sm">{label}</Text>
+        </Group>
+      </UnstyledButton>
+    </Link>
+  );
+}
+
 export const AppShell: React.FunctionComponent<{
   title: string;
   colorScheme?: "light" | "dark";
   routes: Route[];
-}> = ({ colorScheme, routes, title }) => (
+  navLinks: NavLink[];
+}> = ({ colorScheme, routes, title, navLinks }) => (
   <BrowserRouter>
     <MantineProvider
       withGlobalStyles
@@ -27,6 +64,13 @@ export const AppShell: React.FunctionComponent<{
     >
       <MantineAppShell
         padding="md"
+        navbar={
+          <Navbar width={{ base: 300 }} height={500} p="xs">
+            {navLinks.map((link) => (
+              <MainLink {...link} key={link.path} />
+            ))}
+          </Navbar>
+        }
         header={
           <Header
             height={60}

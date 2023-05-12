@@ -5,7 +5,20 @@ function App() {
   return (
     <div>
       <AppShell
-        routes={[{ path: "/", element: () => <div> Home</div> }]}
+        navLinks={[
+          {
+            label: "Home",
+            path: "/",
+          },
+          {
+            label: "Playlist",
+            path: "/playlist",
+          },
+        ]}
+        routes={[
+          { path: "/", element: () => <div> Home</div> },
+          { path: "/playlist", element: () => <div> Playlist</div> },
+        ]}
         title="Movies"
       />
     </div>
