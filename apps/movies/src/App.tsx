@@ -4,7 +4,10 @@ import { AppShell } from "ui";
 function App() {
   return (
     <div>
-      <AppShell title="Movies" />
+      <AppShell
+        routes={[{ path: "/", element: () => <div> Home</div> }]}
+        title="Movies"
+      />
     </div>
   );
 }
