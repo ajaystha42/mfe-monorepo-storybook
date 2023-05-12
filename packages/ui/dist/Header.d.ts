@@ -1,5 +1,4 @@
-/// <reference types="react" />
 export declare const Header: ({ text }: {
     text: string;
-}) => JSX.Element;
+}) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Header.d.ts.map
