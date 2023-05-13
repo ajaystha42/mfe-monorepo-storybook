@@ -140,6 +140,9 @@ importers:
       react:
         specifier: ^18.2.0
         version: 18.2.0
+      store:
+        specifier: workspace:*
+        version: link:../store
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig

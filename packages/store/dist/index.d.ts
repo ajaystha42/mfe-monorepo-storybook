@@ -1,16 +1,9 @@
-import * as React from "react";
-export type Route = {
-    element: React.FunctionComponent;
-    path: string;
-};
-export type NavLink = {
-    label: string;
-    path: string;
-};
-export declare const AppShell: React.FunctionComponent<{
+export type Movie = {
     title: string;
-    colorScheme?: "light" | "dark";
-    routes: Route[];
-    navLinks: NavLink[];
-}>;
+    image: string;
+};
+export declare const useStore: import("zustand").UseBoundStore<import("zustand").StoreApi<{
+    movies: Movie[];
+    addMovie: (movie: Movie) => void;
+}>>;
 //# sourceMappingURL=index.d.ts.map
