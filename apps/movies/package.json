@@ -20,6 +20,7 @@
     "tsconfig": "workspace:*",
     "typescript": "^4.9.5",
     "ui": "workspace:*",
+    "playlist-content": "workspace:*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

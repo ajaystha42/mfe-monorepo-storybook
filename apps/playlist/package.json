@@ -18,6 +18,7 @@
     "react-scripts": "5.0.1",
     "tsconfig": "workspace:*",
     "typescript": "^4.9.5",
+    "playlist-content": "workspace:*",
     "ui": "workspace:*",
     "movies-content": "workspace:*",
     "store": "workspace:*",
