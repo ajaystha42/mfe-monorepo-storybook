@@ -3,7 +3,7 @@ import React from "react";
 import { MovieCard } from "card";
 import { useStore } from "store";
 
-const Playlist = () => {
+const PlaylistContent = () => {
   const { movies } = useStore();
   return (
     <>
@@ -21,4 +21,4 @@ const Playlist = () => {
   );
 };
 
-export default Playlist;
+export default PlaylistContent;
