@@ -1,2 +1,2 @@
-export * from "./src/AppShell";
+export * from "./AppShell";
 //# sourceMappingURL=index.d.ts.map
