@@ -1,6 +1,6 @@
 import "./App.css";
 import { AppShell } from "ui";
-import MoviesContent from "./MoviesContent";
+import { MoviesContent } from "movies-content";
 import Playlist from "./PlaylistContent";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           },
         ]}
         routes={[
-          { path: "/", element: () => <div> This is movie app</div> },
+          { path: "/", element: MoviesContent },
           { path: "/playlist", element: Playlist },
         ]}
       />
