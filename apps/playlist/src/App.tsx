@@ -1,11 +1,14 @@
 import "./App.css";
 import { AppShell } from "ui";
 import MoviesContent from "./MoviesContent";
+import Playlist from "./PlaylistContent";
 
 function App() {
   return (
     <div>
       <AppShell
+        title="Playlist"
+        colorScheme="dark"
         navLinks={[
           {
             label: "Home",
@@ -17,10 +20,9 @@ function App() {
           },
         ]}
         routes={[
-          { path: "/", element: MoviesContent },
-          { path: "/playlist", element: () => <div> Playlist</div> },
+          { path: "/", element: () => <div> This is movie app</div> },
+          { path: "/playlist", element: Playlist },
         ]}
-        title="Movies"
       />
     </div>
   );
